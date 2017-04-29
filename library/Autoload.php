@@ -27,7 +27,7 @@ class Autoload{
 
     }
     public function setController($controller){
-        //eerste leter hoofdleter en con uvfirst en strlower
+
         $controller=ucfirst(strtolower($controller)).'Controller.php';
         $p=  realpath(dirname(__FILE__) . '/../app/controllers/')."/".$controller;
         echo $p;
