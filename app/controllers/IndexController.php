@@ -7,9 +7,15 @@
  */
     class IndexController extends  ActionController {
 
-        public function init(){}
-        public function indexAction(){
+        public function init(){
+            //test is de layout van deze controller
+           $this->setLayout('test');
+        }
 
+        public function indexAction(){
+            echo 'test index';
+
+            return array('id'=>1);
         }
 
 

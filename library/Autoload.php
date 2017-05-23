@@ -25,7 +25,7 @@
     }
 
     //require_once '../app/controllers/IndexController.php';
-//start project
+    //start methode project
     class Autoload{
         const URL_CONTROLLER = "Index";
         const URL_ACTION     = "index";
@@ -46,7 +46,10 @@
             $controller=new $this->controller();
             $controller->setParametre($this->param);
             $controller-> setRequest($this->getMethode());
-            $controller->{$this->action};
+            //$controller->{$this->action};
+           //echo'test run'; naam van de method
+            $result=$controller->{$this->action}();
+            $controller->views($result,$this->view);
         }
 //get data from url
         protected function parseUri(){
